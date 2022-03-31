@@ -1,0 +1,16 @@
+<mat-toolbar class='toolbar__color'>
+  <span>User App</span>
+
+  <span class="example-spacer"></span>
+  <div *ngIf="isUserLogged">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+      (click)="onLogout()"
+      id="logoutButton"
+    >
+      Logout
+    </button>
+  </div>
+</mat-toolbar>

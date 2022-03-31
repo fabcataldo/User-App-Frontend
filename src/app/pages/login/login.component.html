@@ -1,0 +1,45 @@
+<app-toolbar></app-toolbar>
+<div class="container">
+
+
+  <h1>Bienvenido a User App</h1>
+
+  <form #postForm="ngForm" (ngSubmit)="onLogin(postForm.value)">
+    <mat-grid-list cols="1" rowHeight="90px">
+      <mat-grid-tile>
+        <mat-form-field appearance="fill">
+          <mat-label>Usuario</mat-label>
+          <input
+            matInput
+            type="text"
+            class="form-control"
+            id="username"
+            required
+            ngModel
+            name="username"
+          />
+        </mat-form-field>
+      </mat-grid-tile>
+  
+      <mat-grid-tile>
+        <mat-form-field appearance="fill">
+          <mat-label>Contraseña</mat-label>
+          <input
+            matInput
+            type="password"
+            class="form-control"
+            id="password"
+            required
+            ngModel
+            name="password"
+          />
+        </mat-form-field>
+      </mat-grid-tile>
+  
+      <mat-grid-tile>
+        <button id="botonLogin" mat-button color="primary" type="submit">Login</button>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </form>
+  
+</div>
